@@ -2,7 +2,7 @@
 
 ---
 
- The Software
+ ##  The Software
 
 Webshop platform, with the following existing functionalities:
 
@@ -15,11 +15,11 @@ Webshop platform, with the following existing functionalities:
 
 ---
 
- New Features
+##  New Features
 
 ---
 
- 1. Product Rating System
+ ##  1. Product Rating System
 
  Basic Requirement
 

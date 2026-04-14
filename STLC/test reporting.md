@@ -1,27 +1,131 @@
-Scenario 1: Valid Date of Birth
-As a user of FindMate, I am able to sign up and log in when I am 16 years old.
+Test Execution Report — GroceryMate
 
-Step#	Action	Expected outcome	OK/NOK	URL	Link to issue
-1	Go to login page FindMate	Login page appears	OK	https://findmate.masterschool.com/	
-2	Click on Sign up	You are directed to the sign up page	OK	/auth	
-3a	Fill in RandomUsername				
-3b	Fill 18-08-2008 as Date of Birth				
-3c	Write 'This is my Bio'				
-3d	Write karin@faculty.masterschool.com as e-mail address				
-3e	Password is 'RandomPassword1'				
-4	Click sign up	You are directed to the login page. The e-mail and password are filled automatically	OK		
-5	Click on log in	You are successfully logged in	OK		
-image image image image
+Application: GroceryMate
+URL: https://grocerymate.masterschool.com/
 
-Scenario 2: Invalid Date of Birth
-As a user of FindMate, I am not able to sign up when I register with an invalid Date of Birth.
+Tester: Barry Despenza
+Date: April 14, 2026
+Environment: Chrome (latest), macOS
 
-Step#	Action	Expected outcome	OK/NOK	URL	Link to issue
-1	Go to login page FindMate	Login page appears	OK	https://findmate.masterschool.com/	
-2	Click on Sign up	You are directed to the sign up page	OK	/auth	
-3a	Fill in 'InputValidationTest' as username				
-3b	Fill 19-08-1820 as Date of Birth				
-3c	Write 'This is my Bio'				
-3d	Write karin@faculty.masterschool.com as e-mail address				
-3e	Password is 'RandomPassword1'				
-4	Click sign up	You ca
+Feature 1: Product Rating System
+
+Scenario 1: Valid Rating Submission
+
+User Story:
+As a logged-in user who purchased a product, I want to submit a rating so that I can share feedback
+
+| Step# | Action                        | Expected Outcome               | Actual Outcome   | OK/NOK | URL | Link to Issue |
+| ----- | ----------------------------- | ------------------------------ | ---------------- | ------ | --- | ------------- |
+| 1     | Log in                        | User logged in                 | Login successful | OK     |     |               |
+| 2     | Navigate to purchased product | Product page loads             | Dont work        | NOK    |     |               |
+| 3     | Select 5-star rating          | Rating selected                | Dont work        | NOK    |     |               |
+| 4     | Enter feedback (100 chars)    | Feedback accepted              | No feedback      | NOK    |     |               |
+| 5     | Submit rating                 | Rating displayed under product | Not displayed    | NOK    |     |               |
+
+Scenario 2: Rating Without Purchase
+
+User Story:
+As a user, I should not be able to rate products I haven’t purchased.
+
+| Step# | Action               | Expected Outcome        | Actual Outcome | OK/NOK | URL | Link to Issue |
+| ----- | -------------------- | ----------------------- | -------------- | ------ | --- | ------------- |
+| 1     | Log in (no purchase) | User logged in          | OK             | OK     |     |               |
+| 2     | Navigate to product  | Product loads           | OK             | OK     |     |               |
+| 3     | Submit rating        | Error message displayed | OK             | OK     |     |               |
+
+Scenario 3: Feedback Character Limit
+
+User Story:
+As a user, I want feedback length to be limited to ensure proper display.
+
+| Step# | Action                       | Expected Outcome        | Actual Outcome              | OK/NOK | URL | Link to Issue |
+| ----- | ---------------------------- | ----------------------- | --------------------------- | ------ | --- | ------------- |
+| 1     | Enter 300-character feedback | Accepted                | Accepted                    | OK     |     |               |
+| 2     | Enter 301-character feedback | Error message displayed | Accepted without validation | NOK    |     | 🔗 Bug1       |
+
+Scenario 4: Empty Feedback Submission
+
+User Story:
+As a user, I should be able to submit a rating without feedback if optional.
+
+| Step# | Action                         | Expected Outcome | Actual Outcome   | OK/NOK | URL | Link to Issue |
+| ----- | ------------------------------ | ---------------- | ---------------- | ------ | --- | ------------- |
+| 1     | Submit rating without feedback | Rating submitted | Unsubmitted      | NOK    |     |               |
+
+Feature 2: Age Verification for Alcohol
+
+Scenario 6: Access Alcohol Category
+
+User Story:
+As a user, I should verify my age before accessing alcohol products.
+
+| Step# | Action                       | Expected Outcome               | Actual Outcome | OK/NOK | URL | Link to Issue |
+| ----- | ---------------------------- | ------------------------------ | -------------- | ------ | --- | ------------- |
+| 1     | Navigate to alcohol category | Age verification modal appears | No modal shown | NOK    |     |               |
+
+Scenario 7: Valid Age Access (18+)
+
+User Story:
+As a user 18+, I should access alcohol products.
+
+| Step# | Action                         | Expected Outcome | Actual Outcome | OK/NOK | URL | Link to Issue |
+| ----- | ------------------------------ | ---------------- | -------------- | ------ | --- | ------------- |
+| 1     | Enter DOB = (Today - 17 years) | Access denied    | Access granted | NOK    |     | 🔗 Bug #2      |
+
+Scenario 9: Invalid DOB Input
+
+User Story:
+As a user, I should receive validation errors for invalid DOB.
+
+| Step# | Action                   | Expected Outcome    | Actual Outcome | OK/NOK | URL | Link to Issue |
+| ----- | ------------------------ | ------------------- | -------------- | ------ | --- | ------------- |
+| 1     | Enter DOB = "99/99/9999" | Error message shown | Accepted       | NOK    |     | 🔗 Bug #3     |
+
+Feature 3: Shipping Cost Changes
+
+Scenario 10: Free Shipping Threshold (€50)
+
+User Story:
+As a user, I want free shipping when my cart reaches €20.
+
+| Step# | Action                 | Expected Outcome      | Actual Outcome             | OK/NOK | URL | Link to Issue |
+| ----- | ---------------------- | --------------------- | -------------------------- | ------ | --- | ------------- |
+| 1     | Add items totaling €50 | Free shipping applied | Applied                    | OK     |     |               |
+
+Scenario 11: Below Threshold (€20)
+
+User Story:
+As a user, I should pay shipping below €50.
+
+| Step# | Action                    | Expected Outcome        | Actual Outcome      | OK/NOK | URL | Link to Issue |
+| ----- | ------------------------- | ----------------------- | ------------------- | ------ | --- | ------------- |
+| 1     | Add items totaling €49.99 | €5 shipping fee applied | Correct fee applied | OK     |     |               |
+
+Scenario 12: Dynamic Shipping Updates
+
+User Story:
+As a user, I want shipping cost to update dynamically.
+
+| Step# | Action               | Expected Outcome | Actual Outcome | OK/NOK | URL | Link to Issue |
+| ----- | -------------------- | ---------------- | -------------- | ------ | --- | ------------- |
+| 1     | Add item (€20)       | €5 shipping      | Correct        | OK     |     |               |
+| 2     | Add item (total €55) | Free shipping    | Still shows €5 | NOK    |     | 🔗 Bug #4     |
+
+Scenario 13: Discount Impact on Shipping
+
+User Story:
+As a user, shipping should update after discounts.
+
+| Step# | Action               | Expected Outcome     | Actual Outcome      | OK/NOK | URL | Link to Issue |
+| ----- | -------------------- | -------------------- | ------------------- | ------ | --- | ------------- |
+| 1     | Cart = €55           | Free shipping        | OK                  | OK     |     |               |
+| 2     | Apply discount → €45 | Shipping fee applied | Still free shipping | NOK    |     | 🔗 Bug #5    |
+
+Scenario 14: Empty Cart Behavior
+
+User Story:
+As a user, I should not see shipping cost when cart is empty.
+
+| Step# | Action           | Expected Outcome | Actual Outcome           | OK/NOK | URL | Link to Issue |
+| ----- | ---------------- | ---------------- | ------------------------ | ------ | --- | ------------- |
+| 1     | Remove all items | No shipping cost | Shipping still displayed | OK     |     |               |

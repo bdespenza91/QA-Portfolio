@@ -41,7 +41,7 @@ As a user, I want feedback length to be limited to ensure proper display.
 | Step# | Action                       | Expected Outcome        | Actual Outcome              | OK/NOK | URL | Link to Issue      
 | ----- | ---------------------------- | ----------------------- | --------------------------- | ------ | --- | -------------      
 | 1     | Enter 300-character feedback | Accepted                | Accepted                    | OK     |     |                    
-| 2     | Enter 301-character feedback | Error message displayed | Accepted without validation | NOK    |       [#9](https://github.com/bdespenza91/example-portfolio/issues/9)
+| 2     | Enter 301-character feedback | Error message displayed | Accepted without validation | NOK    |     | [#9](https://github.com/bdespenza91/example-portfolio/issues/9)
 
 Scenario 4: Empty Feedback Submission
 

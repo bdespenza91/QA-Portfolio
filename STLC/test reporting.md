@@ -19,7 +19,7 @@ As a logged-in user who purchased a product, I want to submit a rating so that I
 | 1     | Log in                        | User logged in                 | Login successful | OK     |     |               |
 | 2     | Navigate to purchased product | Product page loads             | Dont work        | NOK    |     |  [#1](https://github.com/bdespenza91/example-portfolio/issues/1)             |
 | 3     | Select 5-star rating          | Rating selected                | Dont work        | NOK    |     |  [#2](https://github.com/bdespenza91/example-portfolio/issues/2)             |
-| 4     | Enter feedback (100 chars)    | Feedback accepted              | No feedback      | NOK    |     |               |
+| 4     | Enter feedback (100 chars)    | Feedback accepted              | No feedback      | NOK    |     |  [#3](https://github.com/bdespenza91/example-portfolio/issues/3)             |
 | 5     | Submit rating                 | Rating displayed under product | Not displayed    | NOK    |     |               |
 
 Scenario 2: Rating Without Purchase

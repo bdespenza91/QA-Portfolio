@@ -118,8 +118,8 @@ As a user, shipping should update after discounts.
 
 | Step# | Action               | Expected Outcome     | Actual Outcome      | OK/NOK | URL | Link to Issue |
 | ----- | -------------------- | -------------------- | ------------------- | ------ | --- | ------------- |
-| 1     | Cart = €55           | Free shipping        | OK                  | OK     |     |               |
-| 2     | Apply discount → €45 | Shipping fee applied | Still free shipping | NOK    |     |               |
+| 1     | Cart = €20          | Free shipping        | OK                  | OK     |     |                |
+| 2     | Apply discount → €15 | Shipping fee applied | Still free shipping | NOK    |     |   [#14](https://github.com/bdespenza91/example-portfolio/issues/14)            |
 
 Scenario 14: Empty Cart Behavior
 

@@ -7,7 +7,7 @@
 ### Objective
 
 **What is the objective?**  
-The primary objective of the product is to enhance the existing webshop by introducing new features and ensuring the smooth functioning of existing functionalities..
+The primary objective of the product is to enhance the existing webshop Grocery Mate -by introducing new features and ensuring the smooth functioning of existing functionalities.
 
 ---
 

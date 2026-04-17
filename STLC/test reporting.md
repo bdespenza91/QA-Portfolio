@@ -62,8 +62,8 @@ As a user, I should be able to submit a rating without feedback if optional.
 |-------|-------------------------------|--------------------|------------------|--------|-----|---------------|
 | 1     | Log in                        | User logged in     | Login successful  | OK     |  https://grocerymate.masterschool.com/   |               |
 | 2     | Navigate to purchased product | Product page loads | Page success      | OK     |  https://grocerymate.masterschool.com/product/66b3a57b3fd5048eacb479a6   |               |
-| 3     | Select rating                 | Rating selected    | Success           | OK     |     |               |
-| 4     | Enter no feedback             | Review accepted    | Success           | OK     |     |               |
+| 3     | Select desired rating         | Rating selected    | Success           | OK     |     |               |
+| 4     | Enter no feedback comment     | Review accepted    | Success           | OK     |     |               |
 
 ---
 

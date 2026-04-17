@@ -49,7 +49,7 @@ As a user, I want feedback length to be limited to ensure proper display.
 | 2     | Navigate to purchased product | Product page loads            | work             | OK     |     |               |
 | 3     | Select 5-star rating          | Rating selected               | work             | OK     |     |               |
 | 4     | Enter feedback (500 chars)    | Feedback accepted             | work             | OK     |     |               |
-| 5     | Enter feedback (501 chars)    | Rating displayed under product| displayed        | OK     |     |               |
+| 5     | Enter feedback (501 chars)    | Feedback not accepted         | work             | OK     |     |               |
 
 ---
 

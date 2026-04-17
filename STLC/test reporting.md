@@ -17,10 +17,10 @@ As a logged-in user who purchased a product, I want to submit a rating so that I
 | Step# | Action                        | Expected Outcome               | Actual Outcome   | OK/NOK | URL | Link to Issue |
 | ----- | ----------------------------- | ------------------------------ | ---------------- | ------ | --- | ------------- |
 | 1     | Log in                        | User logged in                 | Login successful | OK     |     |               |
-| 2     | Navigate to purchased product | Product page loads             | Dont work        | OK     |     |               |
-| 3     | Select 5-star rating          | Rating selected                | Dont work        | OK     |     |               |
-| 4     | Enter feedback (500 chars)    | Feedback accepted              | No feedback      | OK     |     |               |
-| 5     | Submit rating                 | Rating displayed under product | Not displayed    | OK     |     |               |
+| 2     | Navigate to purchased product | Product page loads             | work             | OK     |     |               |
+| 3     | Select 5-star rating          | Rating selected                | work             | OK     |     |               |
+| 4     | Enter feedback (500 chars)    | Feedback accepted              | work             | OK     |     |               |
+| 5     | Submit rating                 | Rating displayed under product | displayed        | OK     |     |               |
 
 Scenario 2: Rating Without Purchase
 

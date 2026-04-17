@@ -76,7 +76,7 @@ As a user, I should verify my age before accessing alcohol products.
 
 | Step# | Action                        | Expected Outcome                  | Actual Outcome   | OK/NOK | URL | Link to Issue |
 |-------|-------------------------------|-----------------------------------|------------------|--------|-----|---------------|
-| 1     | Log in                        | User logged in                   | Login successful | OK     |     |               |
+| 1     | User Create account           | User logged in                   | Login successful | OK     |     |               |
 | 2     | Navigate to shop section      | Product pages loads              | work             | OK     |     |               |
 | 3     | Select alcohol tab            | Alcohol products are loaded      | work             | OK     |     |               |
 | 4     | Age Verification modal appears| Error message appears to verify  | work             | OK     |     |               |

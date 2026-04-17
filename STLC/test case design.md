@@ -37,19 +37,14 @@ Example software: grocerymate
         - **Expected Outcome**: Feedback submitted successfully.
 
 7. **Boundary Value Analysis**:
-    - **Test Case**: Verify feedback submission exceeding 300 characters.
-        - **Input**: Feedback = 301 characters.
-        - **Expected Outcome**: Error message "Feedback cannot exceed 300 characters."
+    - **Test Case**: Verify feedback submission exceeding 500 characters.
+        - **Input**: Feedback = 501 characters.
+        - **Expected Outcome**: Error message "Feedback cannot exceed 500 characters."
 
 8. **Error Guessing**:
     - **Test Case**: Verify system behavior when feedback is not entered.
         - **Input**: Submit rating without feedback.
         - **Expected Outcome**: Rating submitted successfully (feedback optional).
-
-9. **Error Guessing**:
-    - **Test Case**: Verify system behavior when feedback contains inappropriate language.
-        - **Input**: Feedback with profanity.
-        - **Expected Outcome**: Feedback is filtered or rejected.
 
 10. **Use Case Testing**:
     - **Test Case**: Verify average rating calculation is correct.
@@ -123,18 +118,18 @@ Example software: grocerymate
 ### Test Cases:
 
 1. **Boundary Value Analysis**:
-    - **Test Case**: Verify free shipping when cart total is exactly €50.
-        - **Input**: Cart total = €50.
+    - **Test Case**: Verify free shipping when cart total is exactly €20.
+        - **Input**: Cart total = €20.
         - **Expected Outcome**: Free shipping applied.
 
 2. **Boundary Value Analysis**:
-    - **Test Case**: Verify shipping fee when cart total is just below €50.
-        - **Input**: Cart total = €49.99.
+    - **Test Case**: Verify shipping fee when cart total is just below €20.
+        - **Input**: Cart total = €19.99.
         - **Expected Outcome**: €5 shipping fee applied.
 
 3. **Boundary Value Analysis**:
-    - **Test Case**: Verify free shipping when cart total is above €50.
-        - **Input**: Cart total = €51.
+    - **Test Case**: Verify free shipping when cart total is above €20.
+        - **Input**: Cart total = €21.
         - **Expected Outcome**: Free shipping applied.
 
 4. **Equivalence Partitioning**:
@@ -156,11 +151,6 @@ Example software: grocerymate
     - **Test Case**: Verify shipping cost consistency between cart and checkout.
         - **Input**: Proceed to checkout.
         - **Expected Outcome**: Shipping cost matches cart value.
-
-8. **Error Guessing**:
-    - **Test Case**: Verify behavior when discount reduces total below €50.
-        - **Input**: Apply discount (e.g., €55 → €45).
-        - **Expected Outcome**: Shipping fee applied correctly.
 
 9. **Error Guessing**:
     - **Test Case**: Verify behavior when cart is empty.

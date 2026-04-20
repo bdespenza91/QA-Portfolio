@@ -11,7 +11,7 @@
 # 📌 Scenario 1: Give Minimum Rating (1 Star)
 
 **User Story:**  
-As a logged-in user who purchased a product, I want to submit a rating so that I can share feedbac
+As a logged-in user who purchased a product, I want to submit a rating so that I can share feedback
 
 ---
 

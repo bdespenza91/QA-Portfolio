@@ -8,23 +8,23 @@
 
 ---
 
-# 📌 Scenario 1: Give Minimum Rating (1 Star)
+#  Scenario 1: Give Minimum Rating (1 Star)
 
 **User Story:**  
 As a logged-in user who purchased a product, I want to submit a rating so that I can share feedback
 
 ---
 
-## 🧪 Test Steps
+##  Test Steps
 
 | Step # | Action | Expected Outcome | Status | URL | Issue |
 |-------|--------|------------------|--------|-----|-------|
 | 1 | Go to the login page of GroceryMate | Login page appears | OK | https://grocerymate.masterschool.com/ | |
-| 2a | Enter username: asdf@example.com | Username accepted | OK | | |
-| 2b | Enter password: AsDfGh | Password accepted | OK | | |
+| 2a | Enter username: Kendricklamar@gmail.com | Username accepted | OK | | |
+| 2b | Enter password: Kanyewest16!| Password accepted | OK | | |
 | 3 | Click Sign In | User is successfully logged in and redirected to homepage | OK | | |
 | 4 | Click Shop button | Navigated to store page | OK | /store | |
-| 5 | Select Pears → Click Add to Cart | Message displayed: Item added to cart | OK | | |
+| 5 | Select Baresa Spaghetti → Click Add to Cart | Message displayed: Item added to cart | OK | | |
 | 6 | Click cart icon | Navigated to checkout page | OK | /checkout | |
 | 7a | Enter street: ABC | Field accepted | OK | | |
 | 7b | Enter city: Berlin | Field accepted | OK | | |
@@ -35,7 +35,7 @@ As a logged-in user who purchased a product, I want to submit a rating so that I
 | 7g | Enter CVV: 123 | Field accepted | OK | | |
 | 8 | Click Buy Now | Redirected to homepage | OK | | |
 | 9 | Click Shop button | Redirected to store page | OK | /store | |
-| 10 | Click Pears | Redirected to product page | OK | https://grocerymate.masterschool.com/product/66b3a57b3fd5048eacb47990 | |
+| 10 | Click Baresa Soaghetti | Redirected to product page | OK | https://grocerymate.masterschool.com/product/66b3a57b3fd5048eacb47990 | |
 | 11 | Select 1 Star rating | 1 star is highlighted | OK | | |
 | 12 | Click Send button | Rating visible & message displayed: "You already reviewed this product" | OK | /store | |
 
@@ -50,11 +50,17 @@ User successfully submits a 1-star rating and receives confirmation message indi
 **User Story:**  
 As a user, I should not be able to rate products I haven’t purchased.
 
-| Step# | Action               | Expected Outcome       | Actual Outcome | OK/NOK | URL | Link to Issue |
-|-------|----------------------|------------------------|----------------|--------|-----|---------------|
-| 1     | Log in (no purchase) | User logged in         | Login successful            | OK     |  https://grocerymate.masterschool.com/   |               |
-| 2     | Navigate to pink lady apples  product  | Product loads          | OK             | OK     | https://grocerymate.masterschool.com/store    |               |
-| 3     | User click 1 star rating    | Inline message appears below the product | OK             | OK     | https://grocerymate.masterschool.com/product/66b3a57b3fd5048eacb479a6    |               |
+| Step # | Action | Expected Outcome | Status | URL | Issue |
+|-------|--------|------------------|--------|-----|-------|
+| 1 | Go to the login page of GroceryMate | Login page appears | OK | https://grocerymate.masterschool.com/ | |
+| 2a | Enter username: Kendricklamar@gmail.com| Username accepted | OK | | |
+| 2b | Enter password: Kanyewest16!| Password accepted | OK | | |
+| 3 | Click Sign In | User is successfully logged in and redirected to homepage | OK | | |
+| 4 | Click Shop button | Navigated to store page | OK | /store | |
+| 5 | Select Baresa Spahgetti| You need to buy this product to tell us your opinion! | OK |https://grocerymate.masterschool.com/product/66b3a57b3fd5048eacb47a66 | |
+
+## ✅ Result
+User is not able to successfully able to submit a product that have not purchased.
 
 ---
 
@@ -63,27 +69,18 @@ As a user, I should not be able to rate products I haven’t purchased.
 **User Story:**  
 As a user, I want feedback length to be limited to ensure proper display.
 
-| Step# | Action                        | Expected Outcome               | Actual Outcome   | OK/NOK | URL | Link to Issue |
-|-------|-------------------------------|-------------------------------|------------------|--------|-----|---------------|
-| 1     | Log in                        | User logged in                | Login successful | OK     |  https://grocerymate.masterschool.com/https://grocerymate.masterschool.com/   |               |
-| 2     | Navigate to purchased product | Product page loads            | success           | OK     |  https://grocerymate.masterschool.com/product/66b3a57b3fd5048eacb479a6   |               |
-| 3     | Select star rating            | Rating selected               | success            | OK     |     |               |
-| 4     | Enter feedback (500 chars)    | Feedback accepted             | success            | OK     |     |               |
-| 5     | Enter feedback (2 chars)      | Feedback not accepted         | success            | NOK    |     |   [Feedback Length Validation Bug](https://github.com/bdespenza91/example-portfolio/issues/13)            |
+| 1 | Go to the login page of GroceryMate | Login page appears | OK | https://grocerymate.masterschool.com/ | |
+| 2a | Enter username: Kendricklamar@gmail.com | Username accepted | OK | | |
+| 2b | Enter password: Kanyewest16!| Password accepted | OK | | |
+| 3 | Click Sign In | User is successfully logged in and redirected to homepage | OK | | |
+| 4 | Click Shop button | Navigated to store page | OK | /store | |
+| 5 |Click Baresa Soaghetti | Redirected to product page | OK | https://grocerymate.masterschool.com/product/66b3a57b3fd5048eacb47990 | |
+| 6 | Select 1 Star rating | 1 star is highlighted | OK | | |
+| 7 | Enter feedback comment with 500 characters. abc..... until you reach 499  |You cannot tell us more about this product.| OK | /store | |
+| 8 | Click Send button | Rating visible & message displayed correctly|: "You already reviewed this product" but the display does not show all of the message abc........  | NOK |  | |
 
----
-
-### Scenario 4: Empty Feedback Submission
-
-**User Story:**  
-As a user, I should be able to submit a rating without feedback if optional.
-
-| Step# | Action                        | Expected Outcome   | Actual Outcome   | OK/NOK | URL | Link to Issue |
-|-------|-------------------------------|--------------------|------------------|--------|-----|---------------|
-| 1     | Log in                        | User logged in     | Login successful  | OK     |  https://grocerymate.masterschool.com/   |               |
-| 2     | Navigate to purchased product | Product page loads | Page success      | OK     |  https://grocerymate.masterschool.com/product/66b3a57b3fd5048eacb479a6   |               |
-| 3     | Select desired rating         | Rating selected    | Success           | OK     |     |               |
-| 4     | Enter no feedback comment     | Review accepted    | Success           | OK     |     |               |
+##  Result
+User was not successfully able to  submit a product review past 499 characters to display proper display 
 
 ---
 
@@ -94,12 +91,24 @@ As a user, I should be able to submit a rating without feedback if optional.
 **User Story:**  
 As a user, I should verify my age before accessing alcohol products.
 
-| Step# | Action                        | Expected Outcome                  | Actual Outcome   | OK/NOK | URL | Link to Issue |
-|-------|-------------------------------|-----------------------------------|------------------|--------|-----|---------------|
-| 1     | User Create account           | User logged in                   | Login successful | OK     |  https://grocerymate.masterschool.com/   |               |
-| 2     | Navigate to shop section      | Product pages loads              | Success          | OK     |  https://grocerymate.masterschool.com/store   |               |
-| 3     | Select alcohol tab            | Alcohol products are loaded      | Success          | OK     |     |               |
-| 4     | Age Verification modal appears| Error message appears to verify  | Success          | OK     |     |               |
+##  Test Steps
+
+| Step # | Action | Expected Outcome | Status | URL | Issue |
+|-------|--------|------------------|--------|-----|-------|
+| 1 | Go to the login page of GroceryMate | Login page appears | OK | https://grocerymate.masterschool.com/ | |
+| 2a | Enter creates a username: Kendricklamar@gmail.com | Username accepted | OK | | |
+| 2b | Enter a password: Kanyewest16!| Password accepted | OK | | |
+| 3 | Click Sign In | User is successfully logged in and redirected to homepage | OK | | |
+| 4 | User views the bday modal| Message displayed: Age Verification
+You need to be +18 to see some products. Please enter your birth date| OK | | 
+| 6 | Enter bday credentials - 19.06.1991 | Field accepted | OK | | |
+| 7 | Click confirm | Rating visible & message displayed: 
+You are of age. You can now view all products, even alcohol products. | OK | /store | |
+
+---
+## ✅ Result
+User successfully has access to alcohol products once they set up their account with the proper age verification.
+
 
 ---
 
@@ -108,28 +117,37 @@ As a user, I should verify my age before accessing alcohol products.
 **User Story:**  
 As a user 18+, I should access alcohol products.
 
-| Step# | Action                        | Expected Outcome      | Actual Outcome   | OK/NOK | URL | Link to Issue |
-|-------|-------------------------------|-----------------------|------------------|--------|-----|---------------|
-| 1     | Log in                        | User logged in        | Login successful | OK     | https://grocerymate.masterschool.com/    |               |
-| 2     | Navigate to shop section      | Product page loads    | work             | OK     |     |               |
-| 3     | Select alcohol tab            | Rating selected       | work             | OK     |     |               |
-| 4     | Age Verification modal appears| Feedback accepted     | work             | OK     |     |               |
-| 5     | Enter DOB = 19.06.1991        | Access granted        | alcohol displayed| OK     |   https://grocerymate.masterschool.com/store#  |               |
+##  Test Steps
+
+| Step # | Action | Expected Outcome | Status | URL | Issue |
+|-------|--------|------------------|--------|-----|-------|
+| 1 | Go to the login page of GroceryMate | Login page appears | OK | https://grocerymate.masterschool.com/ | |
+| 2a | Enter creates a username: Kendricklamar@gmail.com | Username accepted | OK | | |
+| 2b | Enter a password: Kanyewest16!| Password accepted | OK | | |
+| 3 | Click Sign In | User is successfully logged in and redirected to homepage | OK | | |
+| 4 | Click Shop button | Navigated to store page | OK | /store | |
+| 5 | Select Corona extra beer → Click Add to Cart | Message displayed: Item added to cart | OK | | 
 
 ---
+## ✅ Result
+User successfully has access to alcohol products once they set up their account with the proper age verification.
 
 ### Scenario 9: Invalid DOB Input
 
 **User Story:**  
 As a user, I should receive validation errors for invalid DOB.
 
-| Step# | Action                         | Expected Outcome   | Actual Outcome   | OK/NOK | URL | Link to Issue |
-|-------|--------------------------------|--------------------|------------------|--------|-----|---------------|
-| 1     | Log in                         | User logged in     | Login successful | OK     |  https://grocerymate.masterschool.com/   |               |
-| 2     | Navigate to shop section       | Product page loads | work             | OK     |     |               |
-| 3     | Select alcohol tab             | Rating selected    | work             | OK     |     |               |
-| 4     | Age Verification modal appears | Feedback accepted  | work             | OK     |     |               |
-| 5     | Enter DOB = "99/99/9999"       | Access not granted | work             | OK     |     |               |
+| Step # | Action | Expected Outcome | Status | URL | Issue |
+|-------|--------|------------------|--------|-----|-------|
+| 1 | Go to the login page of GroceryMate | Login page appears | OK | https://grocerymate.masterschool.com/ | |
+| 2a | Enter creates a username: Travisscott@gmail.com | Username accepted | OK | | |
+| 2b | Enter a password: Kanyewest16!| Password accepted | OK | | |
+| 3 | Click Sign In | User is successfully logged in and redirected to homepage | OK | | |
+| 4 | User clicks shop | Products displayed | OK | https://grocerymate.masterschool.com/store | || 
+| 6 | Enter bday credentials - 19.06.2026 | Field not accepted | Message displayed you are underage to view alcohol products. OK | | 
+
+## ✅ Result
+User can not successfully access alcohol products if they are underage.
 
 ---
 
@@ -171,3 +189,4 @@ As a user, I should not see shipping cost when cart is empty.
 | 1     | Log in             | User logged in      | Login successful | OK     |  https://grocerymate.masterschool.com/   |               |
 | 2     | Navigate to cart   | Products appear     | Works            | OK     |     |               |
 | 3     | Remove all items   | €5 shipping removed | Succesful        | OK     |     |               |
+

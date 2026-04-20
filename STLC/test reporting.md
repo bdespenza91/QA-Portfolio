@@ -8,20 +8,40 @@
 
 ---
 
-## Feature 1: Product Rating System
-
-### Scenario 1: Valid Rating Submission
+# 📌 Scenario 1: Give Minimum Rating (1 Star)
 
 **User Story:**  
-As a logged-in user who purchased a product, I want to submit a rating so that I can share feedback.
+As a logged-in user who purchased a product, I want to submit a rating so that I can share feedbac
 
-| Step# | Action                        | Expected Outcome               | Actual Outcome   | OK/NOK | URL | Link to Issue |
-|-------|-------------------------------|-------------------------------|------------------|--------|-----|---------------|
-| 1     | Log in                        | User logged in                | Login successful | OK     | https://grocerymate.masterschool.com/auth    |               |
-| 2     | Navigate to purchased product Ginger | Product page loads            | Loaded            | OK     |  https://grocerymate.masterschool.com/product/66b3a57b3fd5048eacb479a6   |                   |
-| 3     | Select star rating            | Rating selected               | Success           | OK     |     |               |
-| 4     | Enter feedback (500 chars)    | Feedback accepted             | Success           | OK     |     |               |
-| 5     | Submit rating                 | Rating displayed under product| displayed         | OK     |     |               |
+---
+
+## 🧪 Test Steps
+
+| Step # | Action | Expected Outcome | Status | URL | Issue |
+|-------|--------|------------------|--------|-----|-------|
+| 1 | Go to the login page of GroceryMate | Login page appears | OK | https://grocerymate.masterschool.com/ | |
+| 2a | Enter username: asdf@example.com | Username accepted | OK | | |
+| 2b | Enter password: AsDfGh | Password accepted | OK | | |
+| 3 | Click Sign In | User is successfully logged in and redirected to homepage | OK | | |
+| 4 | Click Shop button | Navigated to store page | OK | /store | |
+| 5 | Select Pears → Click Add to Cart | Message displayed: Item added to cart | OK | | |
+| 6 | Click cart icon | Navigated to checkout page | OK | /checkout | |
+| 7a | Enter street: ABC | Field accepted | OK | | |
+| 7b | Enter city: Berlin | Field accepted | OK | | |
+| 7c | Enter postal code: 12345 | Field accepted | OK | | |
+| 7d | Enter card number: 12345 | Field accepted | OK | | |
+| 7e | Enter name on card: Abc | Field accepted | OK | | |
+| 7f | Enter expiration date: 12/2032 | Field accepted | OK | | |
+| 7g | Enter CVV: 123 | Field accepted | OK | | |
+| 8 | Click Buy Now | Redirected to homepage | OK | | |
+| 9 | Click Shop button | Redirected to store page | OK | /store | |
+| 10 | Click Pears | Redirected to product page | OK | https://grocerymate.masterschool.com/product/66b3a57b3fd5048eacb47990 | |
+| 11 | Select 1 Star rating | 1 star is highlighted | OK | | |
+| 12 | Click Send button | Rating visible & message displayed: "You already reviewed this product" | OK | /store | |
+
+---
+## ✅ Result
+User successfully submits a 1-star rating and receives confirmation message indicating duplicate review prevention.
 
 ---
 

@@ -83,7 +83,9 @@ As a user, I want feedback length to be limited to ensure proper display.
 | 5 | Click **Baresa Spaghetti** | Redirected to product page | OK | https://grocerymate.masterschool.com/product/66b3a57b3fd5048eacb47990 | |
 | 6 | Select **1-star rating** | 1 star is highlighted | OK | | |
 | 7 | Enter feedback comment with ~500 characters | Error message displayed: *"You cannot tell us more about this product."* | OK | | |
-| 8 | Click **Send** button | Rating visible & message displayed correctly: *"You already reviewed this product"* | NOK | | Message is truncated; full feedback text is not displayed |
+| 8 | Click **Send** button | Rating visible & message displayed correctly: *"You already reviewed this product"* | NOK | | Message is truncated; full feedback text is not displayed || Bug ID | Title | Priority | Status | Link |
+|--------|--------|----------|--------|------|
+| #15 | Product review submission fails when exceeding 499 characters | Medium | Open | https://github.com/bdespenza91/example-portfolio/issues/15#issue-4307984540 |
 
 
 ##  Result

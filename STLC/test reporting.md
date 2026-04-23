@@ -231,3 +231,37 @@ As a user, I should not see shipping cost when cart is empty.
 | 2     | Navigate to cart   | Products appear     | Works            | OK     |     |               |
 | 3     | Remove all items   | €5 shipping removed | Succesful        | OK     |     |               |
 
+##  Scenario: Dynamic Shipping Cost Update
+
+**User Story:**  
+_As a user, I want the shipping cost to update dynamically when I add or remove items from my cart so that I always see the correct total price._
+
+---
+
+### **Use Case Test**
+
+| Step# | Action | Expected Outcome | Actual Outcome | OK/NOK | URL | Link to Issue |
+|------|--------|----------------|----------------|--------|-----|---------------|
+| 1 | 1 | Go to the login page of GroceryMate | Login page appears | OK | https://grocerymate.masterschool.com/ | |
+| 2a | Enter username: Kendricklamar@gmail.com | Username accepted | OK | | |
+| 2b | Enter password: Kanyewest16! | Password accepted | OK | | |
+| 3 | Click "Sign In" | User is successfully logged in and redirected to homepage | OK | | |
+| 4 | Click "Shop" button | Navigated to store page | OK | /store | |
+| 5 | Click Pet Care product tab | Redirected to pet product page | OK | https://grocerymate.masterschool.com/store# | |
+| 6a | Select "Coshida Super Premium Dry Cat Food Assorted" and add to cart | Product is added to cart | OK | | |
+| 6b | Apply filter: price €10–€20 | Products filtered successfully | OK | https://grocerymate.masterschool.com/store# | |
+| 6c | Select twice the "Birchwood 2 Beef Ribeye Steaks" and add to cart | Product added to cart and shipping is 5 euro | OK | https://grocerymate.masterschool.com/store# | |
+| 6d | Select twice the "Deluxe Dry Aged Aberdeen Angus Ribeye Steak" and add to cart | Product added to cart | OK | https://grocerymate.masterschool.com/store# | | 
+| 7 |  Deselect one of the "Birchwood 2 Beef Ribeye Steaks" | Product is subtracted from the cart and shipping is still the same | NOK | https://grocerymate.masterschool.com/checkout
+
+---
+
+### 📸 Screenshots / Evidence
+_Add screenshots here_
+
+---
+
+### 🧠 Notes
+- Shipping cost should recalculate in real time  
+- No page refresh should be required  
+

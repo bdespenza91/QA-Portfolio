@@ -1,0 +1,122 @@
+# GroceryMate QA Testing Project
+
+## Overview
+This project focuses on testing the GroceryMate web application as part of a structured QA process.
+
+The goal was to validate core user flows, identify defects, and ensure a reliable and user-friendly shopping experience.
+
+---
+
+## Application Under Test
+GroceryMate (Test Environment)  
+https://grocerymate.masterschool.com/
+
+---
+
+## Testing Scope
+
+The testing focused on key user journeys:
+
+- User authentication (login)
+- Product browsing and selection
+- Add to cart functionality
+- Checkout process
+- Product rating system
+- Age-restricted product flow (e.g. alcohol verification)
+
+---
+
+## Test Approach
+
+### 1. Test Planning
+- Defined scope and objectives
+- Identified critical user flows
+- Prioritized high-impact features
+
+### 2. Test Design
+Test cases were created using standard QA techniques:
+- Equivalence Partitioning
+- Boundary Value Analysis (BVA)
+- Use Case Testing
+
+---
+
+## Test Execution
+
+Test cases were executed manually and documented using structured reporting.
+
+Each test includes:
+- Steps to reproduce
+- Expected vs actual results
+- Status (Pass/Fail)
+- Linked defects where applicable
+
+---
+
+## Defect Reporting
+
+Bugs were reported using GitHub Issues with the following structure:
+
+- Title and priority
+- Environment details
+- Steps to reproduce
+- Expected result
+- Actual result
+- Attachments (if available)
+
+Example:
+- Dynamic shipping cost not updating in cart
+- Rating submission blocked when feedback is empty
+- Input validation inconsistencies
+
+---
+
+## Key Findings
+
+- Some UI flows lacked proper validation
+- Edge cases (e.g. empty inputs, invalid data) were not consistently handled
+- Minor usability issues impacting user experience
+- Business logic inconsistencies in checkout flow
+
+---
+
+## Test Coverage
+
+- Functional testing
+- Edge case validation
+- Input validation testing
+- Basic usability testing
+
+---
+
+## Tools Used
+
+- Manual testing
+- GitHub (bug tracking)
+- PyCharm (test documentation)
+- Markdown (reporting)
+
+---
+
+## Repository Contents
+
+- Test cases (Markdown format)
+- Bug reports (GitHub Issues)
+- Test execution results
+
+---
+
+## Conclusion
+
+This project demonstrates a structured QA approach to validating a real-world web application.  
+
+It highlights the importance of:
+- Testing critical user journeys
+- Identifying edge cases
+- Ensuring product reliability and usability
+
+---
+
+## Notes
+
+All testing was performed in a test environment for learning and demonstration purposes.

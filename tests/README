@@ -1,0 +1,27 @@
+# PyTest Assignment – Word Matching
+
+## Overview
+This project implements and tests the function `count_word_matches` using PyTest.
+
+The function counts how many times a target word appears as a **standalone word** in a text string, using **case-insensitive matching**.
+
+---
+
+## Function Description
+
+The function:
+
+- Accepts two inputs:
+  - `text` (string)
+  - `target` (string)
+- Returns:
+  - The number of occurrences of the target word
+- Performs:
+  - Case-insensitive matching
+  - Word comparison using space-based splitting
+- Raises:
+  - `TypeError` if inputs are not strings
+
+---
+
+## Project Structure

@@ -1,4 +1,4 @@
-# Barry Despenza – Product, UX & QA Portfolio
+# Barry Despenza – Product, QA Portfolio
 
 ## Overview
 I’m a multidisciplinary product builder working at the intersection of **Product Design, UX, and QA Engineering**.
